@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.lazy.androidjetpackdemo.Navigation.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.lazy.androidjetpackdemo.Navigation.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.lazy.androidjetpackdemo.Navigation.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_navigation4"
+            app:destination="@id/navigation4" />
+    </fragment>
+
+    <navigation
+        android:id="@+id/navigation4"
+        app:startDestination="@id/registeredFragment" >
+        <fragment
+            android:id="@+id/registeredFragment"
+            android:name="com.lazy.androidjetpackdemo.Navigation.RegisteredFragment"
+            android:label="fragment_registered"
+            tools:layout="@layout/fragment_registered" />
+    </navigation>
+
+</navigation>

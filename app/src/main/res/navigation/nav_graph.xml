@@ -41,5 +41,9 @@
             android:label="fragment_registered"
             tools:layout="@layout/fragment_registered" />
     </navigation>
-
+    <activity
+        android:id="@+id/pagingWithNetWorkActivity"
+        android:name="com.lazy.androidjetpackdemo.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 </navigation>

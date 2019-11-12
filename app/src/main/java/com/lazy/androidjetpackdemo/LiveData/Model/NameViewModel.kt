@@ -2,16 +2,13 @@ package com.lazy.androidjetpackdemo.LiveData.Model
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.lazy.androidjetpackdemo.LiveData.User
 
 class NameViewModel : ViewModel() {
-     val currentName: MutableLiveData<User> by  lazy {
-        MutableLiveData<User>()
+     val userData: MutableLiveData<User> = MutableLiveData()
+
+    fun initData(){
+        //通过postValue 或 setvalue传输数据；postValue 可后台运行中使用
+        userData.value=User()
     }
-
-    val user =MutableLiveData<User>()
 }
-
-data class  User (
-    val  name: String="Jie",
-    val  age : String ="20"
-)

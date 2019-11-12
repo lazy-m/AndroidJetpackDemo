@@ -2,6 +2,8 @@ package com.lazy.androidjetpackdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.lazy.androidjetpackdemo.LiveData.LiveDataActivity
 import com.lazy.androidjetpackdemo.Navigation.NavigationActivity
 import com.lazy.androidjetpackdemo.Paging.PagingActivity
@@ -16,5 +18,6 @@ class MainActivity : AppCompatActivity() {
         bt_LiveData.setOnClickListener { startActivity<LiveDataActivity>() }
         bt_Navigation.setOnClickListener { startActivity<NavigationActivity>() }
         bt_Paging.setOnClickListener { startActivity<PagingActivity>() }
+
     }
 }
